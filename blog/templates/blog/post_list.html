@@ -15,28 +15,16 @@
         </p>
     </header>
 
+
+
+    {% for post in posts %}
     <article>
-        <h1><a href=""> My First Post </a></h1>
-        <time>published: 06.12.2023, 09:19</time>
-        <p>
-            This is actually my THIRD attempt trying to figure out how django works. Both times I failed at publishing
-            the website. I guess third times the charm really works huh.
-        </p>
-
+        <h1><a href="">{{ post.title }} </a></h1>
+        <time>publsihed:  {{ post.published_date }}</time>
+        <p>{{ post.text|linebreaksbr }}</p>
     </article>
+    {% endfor %}
 
-    <article>
-        <h1><a href=""> Second Post</a></h1>
-        <time>published: 06.12.2023, 09:30</time>
-        <p>
-            This post was actually created for testing the website tbh, I havent really shared anything about my life
-            just YET. Maybe i should (◔ヘ◔)
-            <br>
-            Currently at school with Alana sleeping on me and keira on roblox playing 'the square obby thing' with this
-            annoying ass fly getting in our faces. Oh yeah I
-            CANTTT wait for friday + the weekends. Its gonna be my first ever hackathon <3 </p>
-
-    </article>
 </body>
 
 </html>
